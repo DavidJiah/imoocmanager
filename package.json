@@ -29,14 +29,19 @@
     "antd": "^3.26.3",
     "babel-plugin-import": "^1.13.0",
     "customize-cra": "^0.9.1",
+    "jsonp": "^0.2.1",
     "less": "^3.10.3",
+    "react-amap": "^1.2.8",
     "react-app-rewired": "^2.1.5"
   },
   "plugins": [
-    ["import", {
-      "libraryName": "antd",
-      "libraryDirectory": "es",
-      "style": "css"
-    }]
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": "css"
+      }
+    ]
   ]
 }

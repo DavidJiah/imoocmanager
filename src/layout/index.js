@@ -20,7 +20,7 @@ class BasicLayout extends PureComponent {
                     <Siders />
                 </Sider>
                 <Layout>
-                    <Header style={{ background: '#fff', textAlign: 'center', padding: 0 }}>
+                    <Header style={{ background: '#fff', minHeight: '14vh' }}>
                         <Headers />
                     </Header>
                     <Content style={{ margin: '24px 16px 0' }}>

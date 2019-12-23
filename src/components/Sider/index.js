@@ -1,10 +1,9 @@
 import React, { PureComponent } from 'react';
-import { Menu, Icon } from 'antd';
+import { Menu } from 'antd';
 import logo from '../../../public/assets/logo.jpg';
 import MenuConfig from '../../config/menuConfig';
 
 const { SubMenu } = Menu;
-const MenuItemGroup = Menu.ItemGroup;
 
 /** 侧边栏 */
 class Sider extends PureComponent {
@@ -40,7 +39,7 @@ class Sider extends PureComponent {
                             height: '10rem',
                         }}
                     />
-                    <h1 style={{ color: 'white', fontSize: '3rem' }}>Imooc MS</h1>
+                    <h1 style={{ color: 'white', fontSize: '3rem' }}>小戴同学</h1>
                 </div>
                 <Menu theme="dark">
                     {menuTreeNode}
