@@ -2,6 +2,7 @@ import { PureComponent } from 'react';
 import { Layout } from 'antd';
 import PropTypes from 'prop-types';
 import Headers from '../components/Header';
+import Siders from '../components/Sider';
 import Footers from '../components/Footer';
 // import N from './components/Header';
 
@@ -16,7 +17,7 @@ class BasicLayout extends PureComponent {
         return (
             <Layout>
                 <Sider width={256} style={{ minHeight: '100vh', color: 'white' }}>
-                    {'Sider'}
+                    <Siders />
                 </Sider>
                 <Layout>
                     <Header style={{ background: '#fff', textAlign: 'center', padding: 0 }}>

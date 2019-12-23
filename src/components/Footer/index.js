@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Button } from 'antd';
+import { } from 'antd';
 
 /** */
 class Footer extends PureComponent {
@@ -8,7 +8,6 @@ class Footer extends PureComponent {
         return (
             <>
                 <div>This is Footer</div>
-                <Button>This is Footer</Button>
             </>
         );
     }
