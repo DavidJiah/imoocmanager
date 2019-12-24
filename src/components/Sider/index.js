@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Menu } from 'antd';
+import { Menu, Affix } from 'antd';
 import logo from '../../../public/assets/logo.jpg';
 import MenuConfig from '../../config/menuConfig';
 import './index.less';
@@ -30,15 +30,15 @@ class Sider extends PureComponent {
     render() {
         const { menuTreeNode } = this.state;
         return (
-            <div>
+            <Affix>
                 <div className="logo">
                     <img src={logo} alt="" />
                     <h1>小戴同学</h1>
                 </div>
-                <Menu theme="dark">
+                <Menu theme="dark" className="Menu">
                     {menuTreeNode}
                 </Menu>
-            </div>
+            </Affix>
         );
     }
 }
