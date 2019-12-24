@@ -1,4 +1,4 @@
-.hreader{
+.header{
     .headerTop{
         height: 3.75rem;
         line-height: 3.75rem;
@@ -9,5 +9,22 @@
         line-height: 2.5rem;
         padding: 0 20px;
         border-top: 1px solid;
+        .breadcrumbTitle{
+            text-align: center;
+            ::after{
+                position: absolute;
+                content: '';
+                left: 50px;
+                width: 10px;
+                height: 10px;
+                background-color: red;
+            }
+        }
+        .weather {
+            text-align: right;
+        }
+        .date {
+            margin-right: .875rem;
+        }
     }
 }

@@ -28,7 +28,7 @@ class BasicLayout extends PureComponent {
                             {children}
                         </div>
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>
+                    <Footer>
                         <Footers />
                     </Footer>
                 </Layout>

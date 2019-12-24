@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Menu } from 'antd';
 import logo from '../../../public/assets/logo.jpg';
 import MenuConfig from '../../config/menuConfig';
+import './index.less';
 
 const { SubMenu } = Menu;
 
@@ -31,15 +32,8 @@ class Sider extends PureComponent {
         return (
             <div>
                 <div className="logo">
-                    <img
-                        src={logo}
-                        alt=""
-                        style={{
-                            width: '16rem',
-                            height: '10rem',
-                        }}
-                    />
-                    <h1 style={{ color: 'white', fontSize: '3rem' }}>小戴同学</h1>
+                    <img src={logo} alt="" />
+                    <h1>小戴同学</h1>
                 </div>
                 <Menu theme="dark">
                     {menuTreeNode}

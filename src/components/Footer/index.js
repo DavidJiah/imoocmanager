@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { } from 'antd';
+import './index.less';
 
 /** */
 class Footer extends PureComponent {
@@ -7,7 +8,9 @@ class Footer extends PureComponent {
     render() {
         return (
             <>
-                <div>This is Footer</div>
+                <div className="footer">
+                    小戴同学第一次写的一个项目
+                </div>
             </>
         );
     }

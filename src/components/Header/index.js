@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Row, Col, Button, Popover } from 'antd';
 import './index.less';
-import { AMap } from 'react-amap';
 import { formateDate, isEmpty } from '../../utils/common';
 import axios from '../../axios';
 
@@ -31,6 +30,7 @@ class Header extends PureComponent {
 
     /** 组件销毁之前 */
     componentWillUnmount() {
+        /** 清楚计时器 */
         clearInterval(this.getDate);
     }
 
@@ -40,19 +40,13 @@ class Header extends PureComponent {
             const sysTime = formateDate(new Date().getTime());
             this.setState({ sysTime });
         }, 1000);
+        /** 获取天气情况 */
         this.getWeatherAPIData();
     }
 
-    /** */
+    /** 获取城市 */
     getPosition=() => {
-        AMap.plugin('AMap.CitySearch', () => {
-            const citySearch = new AMap.CitySearch();
-            citySearch.getLocalCity((status, result) => {
-                if (status === 'complete' && result.info === 'OK') {
-                // 查询成功，result即为当前所在城市信息
-                }
-            });
-        });
+        /** 想在这里获取城市坐标  暂时没有实现 */
     }
 
     /** 获取天气情况
@@ -92,11 +86,6 @@ class Header extends PureComponent {
             <div className="header">
                 <Row
                     className="headerTop"
-                    style={{
-                        height: '3.75rem',
-                        lineHeight: '3.75rem',
-                        padding: ' 0 20px',
-                    }}
                 >
                     <Col span="24" style={{ textAlign: 'right' }}>
                         <span>
@@ -106,20 +95,12 @@ class Header extends PureComponent {
                         <Button type="link">退出</Button>
                     </Col>
                 </Row>
-                <Row
-                    className="breadcrumb"
-                    style={{
-                        height: '2.5rem',
-                        lineHeight: '2.5rem',
-                        padding: '0 20px',
-                        borderTop: '1px solid #f9c700',
-                    }}
-                >
-                    <Col span="4" className="breadcrumb-title" style={{ textAlign: 'center' }}>
+                <Row className="breadcrumb">
+                    <Col span="4" className="breadcrumbTitle">
                         <span className="date">首页</span>
                     </Col>
-                    <Col span="20" className="weather" style={{ textAlign: 'right' }}>
-                        <span className="date" style={{ marginRight: '14px' }}>{sysTime}</span>
+                    <Col span="20" className="weather">
+                        <span className="date">{sysTime}</span>
                         <span className="weather-detail">
                             <Popover content={content} title={`${province}省${city}`}>
                                 <Button type="link">今日天气</Button>
