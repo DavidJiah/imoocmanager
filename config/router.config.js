@@ -8,6 +8,11 @@ export default [
                 path: '/',
                 component: './home',
             },
+            {
+                path: '/buttons',
+                name: 'buttons',
+                component: './ui/buttons',
+            },
         ],
     },
 ];

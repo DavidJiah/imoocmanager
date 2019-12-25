@@ -9,7 +9,7 @@ class Footer extends PureComponent {
         return (
             <>
                 <div className="footer">
-                    小戴同学第一次写的一个项目
+                    小戴同学写的一个项目
                 </div>
             </>
         );

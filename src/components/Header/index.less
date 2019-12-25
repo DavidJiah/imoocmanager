@@ -1,4 +1,5 @@
 .header{
+    background-color: #ffffff;
     .headerTop{
         height: 3.75rem;
         line-height: 3.75rem;
@@ -8,16 +9,17 @@
         height: 2.5rem;
         line-height: 2.5rem;
         padding: 0 20px;
-        border-top: 1px solid;
+        border-top: 1px solid #d5d94e;
         .breadcrumbTitle{
             text-align: center;
-            ::after{
+            &:after{
                 position: absolute;
                 content: '';
-                left: 50px;
-                width: 10px;
-                height: 10px;
-                background-color: red;
+                left: 4.749rem;
+                top: 2.48rem;
+                border-top: 9px solid #ffffff;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
             }
         }
         .weather {
@@ -25,6 +27,7 @@
         }
         .date {
             margin-right: .875rem;
+            font-size: 1.125rem;
         }
     }
 }

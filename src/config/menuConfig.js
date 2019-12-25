@@ -1,93 +1,93 @@
 const menuList = [
     {
         title: '首页',
-        key: '/admin/home',
+        key: '/',
     },
     {
         title: 'UI',
-        key: '/admin/ui',
+        key: '/ui',
         children: [
             {
                 title: '按钮',
-                key: '/admin/ui/buttons',
+                key: '/buttons',
             },
             {
                 title: '弹框',
-                key: '/admin/ui/modals',
+                key: '/modals',
             },
             {
                 title: 'Loading',
-                key: '/admin/ui/loading',
+                key: '/loading',
             },
             {
                 title: '通知提醒',
-                key: '/admin/ui/notification',
+                key: '/notification',
             },
             {
                 title: '全局Message',
-                key: '/admin/ui/messages',
+                key: '/messages',
             },
             {
                 title: 'Tab页签',
-                key: '/admin/ui/tabs',
+                key: '/tabs',
             },
         ],
     },
     {
         title: '表单',
-        key: '/admin/form',
+        key: '/form',
         children: [
             {
                 title: '登陆',
-                key: '/admin/form/login',
+                key: '/login',
             },
             {
                 title: '注册',
-                key: '/admin/form/reg',
+                key: '/reg',
             },
         ],
     },
     {
         title: '表格',
-        key: '/admin/table',
+        key: '/table',
         children: [
             {
                 title: '行',
-                key: '/admin/form/tr',
+                key: '/tr',
             },
             {
                 title: '列',
-                key: '/admin/form/td',
+                key: '/td',
             },
         ],
     },
     {
         title: '富文本',
-        key: '/admin/text',
+        key: '/text',
     },
     {
         title: '城市管理',
-        key: '/admin/city',
+        key: '/city',
     },
     {
         title: '订单管理',
-        key: '/admin/Order',
+        key: '/Order',
     },
     {
         title: '员工管理',
-        key: '/admin/people',
+        key: '/people',
     },
     {
         title: '车辆地图',
-        key: '/admin/car',
+        key: '/car',
     },
     {
         title: '图标',
-        key: '/admin/icon',
+        key: '/icon',
     },
     {
         title: '权限设置',
-        key: '/admin/authority',
+        key: '/authority',
     },
 ];
 export default menuList;

@@ -6,7 +6,7 @@ class Home extends PureComponent {
     render() {
         return (
             <>
-                <div style={{ fontSize: '20px' }}>
+                <div style={{ fontSize: '20px', height: 'calc(60vh)' }}>
                     Hello,World
                 </div>
             </>

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Menu, Affix } from 'antd';
+import router from 'umi/router';
 import logo from '../../../public/assets/logo.jpg';
 import MenuConfig from '../../config/menuConfig';
 import './index.less';
@@ -26,6 +27,11 @@ class Sider extends PureComponent {
         return <Menu.Item title={item.title} key={item.key}>{item.title}</Menu.Item>;
     }))
 
+    /** 侧边栏跳转 */
+    handleMenuClick=(e) => {
+        router.push(e.key);
+    }
+
     /** 组件挂载 */
     render() {
         const { menuTreeNode } = this.state;
@@ -35,7 +41,7 @@ class Sider extends PureComponent {
                     <img src={logo} alt="" />
                     <h1>小戴同学</h1>
                 </div>
-                <Menu theme="dark" className="Menu">
+                <Menu theme="dark" className="Menu" onClick={this.handleMenuClick}>
                     {menuTreeNode}
                 </Menu>
             </Affix>
