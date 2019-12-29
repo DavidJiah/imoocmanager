@@ -78,7 +78,7 @@ class Header extends PureComponent {
                 <p>温度: {temperature}℃</p>
                 <p>风向: {winddirection}</p>
                 <p>风速: {windpower}</p>
-                <p>空气湿度: {humidity}℃</p>
+                <p>相对湿度: {humidity}%</p>
             </div>
             /* eslint-enable */
         );
