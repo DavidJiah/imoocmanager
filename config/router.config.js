@@ -33,6 +33,11 @@ export default [
                 name: 'message',
                 component: './ui/message',
             },
+            {
+                path: '/tabs',
+                name: 'tabs',
+                component: './ui/tab',
+            },
         ],
     },
 ];
