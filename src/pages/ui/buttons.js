@@ -37,7 +37,7 @@ class Buttons extends PureComponent {
                 <Card title="Loading按钮" className="card-wrap">
                     <Button type="primary" loading={loading}>确定</Button>
                     <Button type="primary" loading={loading} shape="circle" />
-                    <Button loading={loading}>点击加载</Button>
+                    <Button loading={loading}>加载</Button>
                     <Button shape="circle" loading={loading} />
                     <Button type="primary" onClick={() => { this.setState({ loading: false }); }}>关闭</Button>
                     <Button type="primary" onClick={() => { this.setState({ loading: true }); }}>加载</Button>
