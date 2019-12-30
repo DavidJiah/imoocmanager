@@ -1,4 +1,10 @@
 export default [
+    /** User */
+    {
+        path: '/login',
+        name: 'login',
+        component: './login',
+    },
     /** app */
     {
         path: '/',
