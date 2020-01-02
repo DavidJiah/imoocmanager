@@ -43,7 +43,11 @@ const menuList = [
             },
             {
                 title: '注册',
-                key: '/reg',
+                key: '/login/register',
+            },
+            {
+                title: '修改',
+                key: '/login/update',
             },
         ],
     },

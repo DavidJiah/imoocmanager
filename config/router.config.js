@@ -2,9 +2,26 @@ export default [
     /** User */
     {
         path: '/login',
-        name: 'login',
-        component: './login',
+        component: '../layout/login',
+        routes: [
+            {
+                path: '/login',
+                name: 'login',
+                component: './login',
+            },
+            {
+                path: '/login/register',
+                name: 'register',
+                component: './login/register',
+            },
+            {
+                path: '/login/update',
+                name: 'update',
+                component: './login/update',
+            },
+        ],
     },
+
     /** app */
     {
         path: '/',

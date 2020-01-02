@@ -12,6 +12,10 @@ class Login extends PureComponent {
         this.state = {};
     }
 
+    /** 组件挂载之前 */
+    componentWillMount() {
+    }
+
     /** 登陆 */
     handleSubmit = (e) => {
         e.preventDefault();
@@ -22,6 +26,7 @@ class Login extends PureComponent {
             }
         });
     };
+
 
     /** 组件挂载 */
     render() {
@@ -38,11 +43,7 @@ class Login extends PureComponent {
                 </Form.Item>
                 <Form.Item>
                     {getFieldDecorator('password', { rules: [{ required: true, message: 'Please input your Password!' }] })(
-                        <Input
-                            prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                            type="password"
-                            placeholder="Password"
-                        />,
+                        <Input.Password placeholder="Password" prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} />,
                     )}
                 </Form.Item>
                 <Form.Item>
@@ -55,7 +56,7 @@ class Login extends PureComponent {
                         {'登陆'}
                     </Button>
                     <Icon type="user-add" />
-                    <Button type="link" onClick={() => { router.push('/register'); }}>{'立即注册!'}</Button>
+                    <Button type="link" onClick={() => { router.push('/login/register'); }}>{'立即注册!'}</Button>
                 </Form.Item>
             </Form>
         );
