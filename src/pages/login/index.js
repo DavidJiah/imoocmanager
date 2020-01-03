@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Form } from 'antd';
 import { connect } from 'dva';
 import PropTypes from 'prop-types';
-import Login from '../../components/Login';
+import Login from '@/components/Login';
 import './index.less';
 
 /** 连接dva */

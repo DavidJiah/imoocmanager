@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Row, Col, Button, Popover } from 'antd';
 import './index.less';
+import router from 'umi/router';
 import { formateDate, isEmpty } from '../../utils/common';
 import axios from '../../axios';
 
@@ -92,7 +93,7 @@ class Header extends PureComponent {
                             欢迎,
                             {userName}
                         </span>
-                        <Button type="link">退出</Button>
+                        <Button type="link" onClick={() => { router.push('/login'); }}>退出</Button>
                     </Col>
                 </Row>
                 <Row className="breadcrumb">

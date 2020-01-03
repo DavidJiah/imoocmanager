@@ -1,4 +1,4 @@
-import request from '../utils/request';
+import request from '@/utils/request';
 
 /**
  * login [密码登录方法]

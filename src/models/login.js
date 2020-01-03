@@ -1,6 +1,6 @@
 import { message } from 'antd';
 import router from 'umi/router';
-import { login } from '../services/login';
+import { login } from '@/services/login';
 
 export default {
     namespace: 'login',

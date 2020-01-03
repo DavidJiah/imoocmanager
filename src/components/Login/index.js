@@ -51,7 +51,7 @@ class Login extends PureComponent {
                         valuePropName: 'checked',
                         initialValue: true,
                     })(<Checkbox>{'记住密码'}</Checkbox>)}
-                    <Button type="link" className="login-form-forgot" onClick={() => { router.push('/update'); }}>{'忘记密码!'}</Button>
+                    <Button type="link" className="login-form-forgot" onClick={() => { router.push('/login/update'); }}>{'忘记密码!'}</Button>
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         {'登陆'}
                     </Button>
