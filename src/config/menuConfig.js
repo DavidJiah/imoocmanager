@@ -35,6 +35,10 @@ const menuList = [
                 title: '图片画廊',
                 key: '/gallery',
             },
+            {
+                title: '轮播图',
+                key: '/carousel',
+            },
         ],
     },
     {

@@ -71,6 +71,11 @@ export default [
                 name: 'gallery',
                 component: './ui/gallery',
             },
+            {
+                path: '/carousel',
+                name: 'carousel',
+                component: './ui/carousel',
+            },
         ],
     },
 ];

@@ -31,7 +31,8 @@ export default class Gallery extends PureComponent {
         const imgList = imgs.map(list => list.map(item => (
             <Card
                 style={{ marginBottom: '10px' }}
-                cover={<img src={`/gallery/${item}`} alt="" onClick={() => { this.openGallery(imgSrc); }} />}
+                cover={<img src={`/gallery/${item}`} alt="" />}
+                onClick={() => { this.openGallery(imgSrc); }}
             >
                 <Card.Meta
                     title="React study"
