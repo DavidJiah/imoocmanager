@@ -23,9 +23,11 @@ module.exports = {
         React: true,
     },
     // 第三方插件
-    plugins: ['react'],
+    plugins: ['react',"react-hooks"],
     // 规则配置
     rules: {
+        "react-hooks/rules-of-hooks": "error", // 检查 Hook 的规则
+        "react-hooks/exhaustive-deps": "warn", // 检查 effect 的依赖
         'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],

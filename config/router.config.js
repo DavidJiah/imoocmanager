@@ -61,6 +61,16 @@ export default [
                 name: 'tabs',
                 component: './ui/tab',
             },
+            {
+                path: '/Hooks',
+                name: 'Hooks',
+                component: './ui/hooks',
+            },
+            {
+                path: '/gallery',
+                name: 'gallery',
+                component: './ui/gallery',
+            },
         ],
     },
 ];

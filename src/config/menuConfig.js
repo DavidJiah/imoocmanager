@@ -31,6 +31,14 @@ const menuList = [
                 title: 'Tab页签',
                 key: '/tabs',
             },
+            {
+                title: 'HOOKS',
+                key: '/hooks',
+            },
+            {
+                title: 'Gallery',
+                key: '/gallery',
+            },
         ],
     },
     {
