@@ -32,12 +32,17 @@ const menuList = [
                 key: '/tabs',
             },
             {
-                title: 'HOOKS',
-                key: '/hooks',
-            },
-            {
-                title: 'Gallery',
+                title: '图片画廊',
                 key: '/gallery',
+            },
+        ],
+    },
+    {
+        title: 'HOOKS',
+        children: [
+            {
+                title: 'useState',
+                key: '/hooks',
             },
         ],
     },
