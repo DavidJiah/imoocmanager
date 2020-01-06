@@ -6,7 +6,7 @@ import Login from '@/components/Login';
 import './index.less';
 
 /** 连接dva */
-@connect(({ loading }) => ({ loading }))
+@connect(() => ({ }))
 
 /** 登陆 */
 class IndexLogin extends PureComponent {

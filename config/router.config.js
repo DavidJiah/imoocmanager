@@ -76,6 +76,11 @@ export default [
                 name: 'carousel',
                 component: './ui/carousel',
             },
+            {
+                path: '/table/basic',
+                name: 'basic',
+                component: './table/basicTable',
+            },
         ],
     },
 ];

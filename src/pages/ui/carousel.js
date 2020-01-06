@@ -17,9 +17,9 @@ class Carousels extends React.PureComponent {
                 </Card>
                 <Card title="图片轮播" className="slider-wrap">
                     <Carousel autoplay effect="fade">
-                        <div><img src="/carousel-img/carousel-1.jpg" alt="" /></div>
-                        <div><img src="/carousel-img/carousel-2.jpg" alt="" /></div>
-                        <div><img src="/carousel-img/carousel-3.jpg" alt="" /></div>
+                        <div><img src="/carousel-img/carousel-1.jpg" alt="" style={{ width: '85rem', height: '20rem' }} /></div>
+                        <div><img src="/carousel-img/carousel-2.jpg" alt="" style={{ width: '85rem' }} /></div>
+                        <div><img src="/carousel-img/carousel-3.jpg" alt="" style={{ width: '85rem' }} /></div>
                     </Carousel>
                 </Card>
             </>

@@ -9,7 +9,7 @@ import request from '@/utils/request';
  */
 export async function login(params) {
     const { mobile, password } = params;
-    return request('/api/loginCheck', {
+    return request('/login/login', {
         method: 'GET',
         data: {
             mobile,

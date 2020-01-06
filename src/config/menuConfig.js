@@ -73,12 +73,12 @@ const menuList = [
         key: '/table',
         children: [
             {
-                title: '行',
-                key: '/tr',
+                title: '基础表格',
+                key: '/table/basic',
             },
             {
-                title: '列',
-                key: '/td',
+                title: '高级表格',
+                key: '/table/high',
             },
         ],
     },
