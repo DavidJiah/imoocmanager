@@ -31,7 +31,7 @@
     "umi-plugin-react": "^1.14.10"
   },
   "dependencies": {
-    "antd": "^3.26.3",
+    "antd": "^3.26.6",
     "axios": "^0.19.0",
     "babel-plugin-import": "^1.13.0",
     "customize-cra": "^0.9.1",
