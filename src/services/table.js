@@ -6,7 +6,7 @@ import request from '@/utils/request';
  * @return [table值]
  */
 export async function list() {
-    return request('/table/list', { method: 'GET' });
+    return request('/table/lists', { method: 'GET' });
 }
 /**
  * login [密码登录方法]
