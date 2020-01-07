@@ -3,6 +3,7 @@ import { Menu, Affix } from 'antd';
 import router from 'umi/router';
 import logo from '../../../public/assets/logo.jpg';
 import MenuConfig from '../../config/menuConfig';
+import title from '../../../public/assets/logo.png';
 import './index.less';
 
 const { SubMenu } = Menu;
@@ -39,7 +40,7 @@ class Sider extends PureComponent {
             <Affix>
                 <div className="logo">
                     <img src={logo} alt="" />
-                    <h1>小戴同学</h1>
+                    <img src={title} alt="" style={{ width: '11rem' }} />
                 </div>
                 <Menu theme="dark" className="Menu" onClick={this.handleMenuClick}>
                     {menuTreeNode}

@@ -1,7 +1,7 @@
 import request from '@/utils/request';
 
 /**
- * list [查询表单信息]
+ * list [动态查询表单信息]
  * @author XiaoDai
  * @return [table值]
  */
