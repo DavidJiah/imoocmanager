@@ -6,17 +6,17 @@ export default [
         routes: [
             {
                 path: '/login',
-                name: 'login',
+                name: '登陆',
                 component: './login',
             },
             {
                 path: '/login/register',
-                name: 'register',
+                name: '注册',
                 component: './login/register',
             },
             {
                 path: '/login/update',
-                name: 'update',
+                name: '修改密码',
                 component: './login/update',
             },
         ],
@@ -33,32 +33,32 @@ export default [
             },
             {
                 path: '/buttons',
-                name: 'buttons',
+                name: '按钮',
                 component: './ui/buttons',
             },
             {
                 path: '/modals',
-                name: 'modals',
+                name: '弹框',
                 component: './ui/modals',
             },
             {
                 path: '/loading',
-                name: 'loading',
+                name: '加载',
                 component: './ui/loading',
             },
             {
                 path: '/notification',
-                name: 'notice',
+                name: '通知提醒',
                 component: './ui/notice',
             },
             {
                 path: '/messages',
-                name: 'message',
+                name: '全局提醒',
                 component: './ui/message',
             },
             {
                 path: '/tabs',
-                name: 'tabs',
+                name: 'tab页签',
                 component: './ui/tab',
             },
             {
@@ -68,18 +68,23 @@ export default [
             },
             {
                 path: '/gallery',
-                name: 'gallery',
+                name: '图片画廊',
                 component: './ui/gallery',
             },
             {
                 path: '/carousel',
-                name: 'carousel',
+                name: '轮播图',
                 component: './ui/carousel',
             },
             {
                 path: '/table/basic',
-                name: 'basic',
+                name: '基础表格',
                 component: './table/basicTable',
+            },
+            {
+                path: '/table/high',
+                name: '高级表格',
+                component: './table/highTable',
             },
         ],
     },
