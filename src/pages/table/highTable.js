@@ -77,10 +77,10 @@ const dataSource = [
 ];
 /** 连接dva */
 @connect(({
-    table: { dataSource2 } = {},
+    table: { dataSource3 } = {},
     loading,
 }) => ({
-    dataSource2,
+    dataSource3,
     loading: loading.models.table,
 }))
 /**
@@ -90,22 +90,29 @@ class highTable extends PureComponent {
     /** 初始化 */
     constructor(props) {
         super(props);
-        this.state = {};
-    }
-
-    /** 动态获取数据 */
-    request=() => {
-        const { dispatch } = this.props;
-        dispatch({ type: 'table/list' });
+        this.state = { sortOrder: '' };
     }
 
     /** 组件挂载之前 */
-    compontWillmount() {
-        this.request();
+    componentWillMount() {
+        this.getTableList();
+    }
+
+    /** 动态获取排序表格数据 */
+    getTableList=() => {
+        const { dispatch } = this.props;
+        dispatch({ type: 'table/high' });
+    }
+
+    /** 排序 */
+    handleChange=(pagination, filters, sorter) => {
+        this.setState({ sortOrder: sorter.order });
     }
 
     /** 组件挂载 */
     render() {
+        const { sortOrder } = this.state;
+        /** 头部固定columns */
         const columns = [
             {
                 title: 'id',
@@ -177,6 +184,7 @@ class highTable extends PureComponent {
                 dataIndex: 'time',
             },
         ];
+        /** 表格排序columns */
         const columns2 = [
             {
                 title: 'id',
@@ -196,6 +204,14 @@ class highTable extends PureComponent {
                 render(sex) {
                     return sex == 1 ? '男' : '女';
                 },
+            },
+            {
+                title: '年龄',
+                key: 'age',
+                width: 80,
+                dataIndex: 'age',
+                sorter: (a, b) => a.age - b.age,
+                sortOrder,
             },
             {
                 title: '状态',
@@ -232,23 +248,8 @@ class highTable extends PureComponent {
                     return config[interest];
                 },
             },
-            {
-                title: '生日',
-                width: 120,
-                dataIndex: 'birthday',
-            },
-            {
-                title: '地址',
-                width: 80,
-                dataIndex: 'address',
-            },
-            {
-                title: '上班时间',
-                width: 80,
-                dataIndex: 'time',
-            },
         ];
-        const { dataSource2 } = this.props;
+        const { dataSource3 } = this.props;
         return (
             <>
                 <Card title="头部固定" className="card-wrap">
@@ -263,9 +264,9 @@ class highTable extends PureComponent {
                 <Card className="card-wrap" title="表格排序" style={{ margin: '10px,0' }}>
                     <Table
                         columns={columns2}
-                        dataSource={dataSource2}
-                        scroll={{ x: 300 }}
+                        dataSource={dataSource3}
                         pagination={false}
+                        onChange={this.handleChange}
                     />
                 </Card>
             </>
@@ -274,11 +275,11 @@ class highTable extends PureComponent {
 }
 highTable.defaultProps = {
     dispatch: '',
-    dataSource2: [],
+    dataSource3: [],
 };
 
 highTable.propTypes = {
     dispatch: PropTypes.any,
-    dataSource2: PropTypes.any,
+    dataSource3: PropTypes.any,
 };
 export default highTable;

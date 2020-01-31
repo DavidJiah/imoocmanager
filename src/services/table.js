@@ -9,19 +9,10 @@ export async function list() {
     return request('/table/lists', { method: 'GET' });
 }
 /**
- * login [密码登录方法]
+ * high [动态查询高级表单信息]
  * @author XiaoDai
- * @param {string} mobile [电话]
- * @param {string} password [密码]
- * @return [用户登录信息]
+ * @return [表单信息]
  */
-export async function log1in(params) {
-    const { mobile, password } = params;
-    return request('/login/login', {
-        method: 'GET',
-        data: {
-            mobile,
-            password,
-        },
-    });
+export async function high() {
+    return request('/table/high/list', { method: 'GET' });
 }
