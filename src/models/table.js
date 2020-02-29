@@ -26,7 +26,6 @@ export default {
         /** 高级table数据 */
         * high({ callBack = null }, { call, put }) {
             const res = yield call(high);
-            console.log(res);
             if (res.code == 200) {
                 yield put({
                     type: 'getTable',

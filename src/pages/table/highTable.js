@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Card, Table } from 'antd';
+import { Card, Table, Badge, Modal, message, Button } from 'antd';
 import PropTypes from 'prop-types';
 import { connect } from 'dva';
 
@@ -107,6 +107,19 @@ class highTable extends PureComponent {
     /** 排序 */
     handleChange=(pagination, filters, sorter) => {
         this.setState({ sortOrder: sorter.order });
+    }
+
+    /** 删除操作 */
+    handleDelete=(item) => {
+        const { id } = item;
+        Modal.confirm({
+            title: '确认',
+            content: '您确认要删除此条数据吗?',
+            onOk: () => {
+                message.success('删除成功');
+                this.request(id);
+            },
+        });
     }
 
     /** 组件挂载 */
@@ -236,17 +249,22 @@ class highTable extends PureComponent {
                 /** 判断状态 */
                 render(interest) {
                     const config = {
-                        1: 'CF',
-                        2: 'LOL',
-                        3: 'DNF',
-                        4: 'NBA',
-                        5: 'CBA',
-                        6: 'TD',
-                        7: 'BP',
-                        8: 'KDC',
+                        1: <Badge status="success" text="成功" />,
+                        2: <Badge status="error" text="报错" />,
+                        3: <Badge status="default" text="正常" />,
+                        4: <Badge status="processing" text="进行中" />,
+                        5: <Badge status="warning" text="警告" />,
+                        6: 'CF',
+                        7: 'LOL',
+                        8: 'DNF',
                     };
                     return config[interest];
                 },
+            },
+            {
+                title: '操作',
+                /** 删除操作 */
+                render: (text, item) => <Button type="link" onClick={() => { this.handleDelete(item); }}>删除</Button>,
             },
         ];
         const { dataSource3 } = this.props;

@@ -71,7 +71,7 @@ const errorHandler = (error) => {
 const request = extend({
     requestType: 'form',
     errorHandler, // 默认错误处理
-    prefix: ' https://www.easy-mock.com/mock/5e1170a189654e0b4a7491b6/xiaod', /** 表头 */
+    // prefix: ' http://127.0.0.1:7300/mock/5e59c771b40f6e2398cecc45', /** 表头 */
     credentials: 'include', // 默认请求是否带上cookie
     timeout: 40000, // 设置请求等待时间(毫秒)
 });

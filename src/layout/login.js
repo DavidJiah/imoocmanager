@@ -14,7 +14,7 @@ class LoginLayout extends PureComponent {
         const { children } = this.props;
         return (
             <Layout>
-                <Sider width={1300} style={{ minHeight: '100vh' }}>
+                <Sider width={1120} style={{ minHeight: '100vh' }}>
                     <img src={loginbg} alt="" style={{ width: '100%', height: '100%' }} />
                 </Sider>
                 <Layout>

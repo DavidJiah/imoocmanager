@@ -77,6 +77,7 @@ class BasicTable extends PureComponent {
     render() {
         const { dataSource, selectedRowKeys } = this.state;
         const { dataSource2, loading } = this.props;
+        console.log(dataSource2);
         const columns = [
             {
                 title: 'id',

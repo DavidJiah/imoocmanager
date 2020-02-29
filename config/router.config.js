@@ -86,6 +86,11 @@ export default [
                 name: '高级表格',
                 component: './table/highTable',
             },
+            {
+                path: '/Order',
+                name: '订单管理',
+                component: './order',
+            },
         ],
     },
 ];
